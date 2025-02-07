@@ -1,0 +1,268 @@
+body {
+  font-family: "attribute-text", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  color: #333;
+  display: center;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el cuerpo ocupe al menos toda la altura de la ventana */
+}
+
+header {
+  background-color: #ffcccc; /* Rojo pastel */
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-family: "source-code-pro", monospace;
+  font-weight: 7000;
+  font-style: normal;
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header p {
+  font-family: "attribute-text", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+  font-size: 1.2em;
+}
+
+nav {
+  background-color: #b3e6b3; /* Rojo pastel */
+  display: flex; /* Alinea el logo y el texto horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  gap: 10px; /* Espacio entre el logo y el texto */
+}
+
+.logo {
+  width: 150px; /* Ajusta el tamaño del logo */
+  height: auto; /* Mantiene la proporción */
+}
+
+section {
+  padding: 20px;
+  margin: 20px;
+  background-color: #cce6ff; /* Azul pastel */
+  border-radius: 10px;
+  flex: 1; /* Hace que las secciones ocupen el espacio restante */
+  margin-bottom: 20px; /* Espacio para el footer */
+}
+
+section h2 {
+  font-family: "source-code-pro", monospace;
+  font-weight: 7000;
+  font-style: normal;
+  margin-top: 0;
+}
+
+/* Estilos del footer dentro del contenedor */
+
+.footer-section {
+  background-color: #b3e6b3; /* Rojo pastel */
+  text-align: center;
+  padding: 5px;
+  width: 100%;
+  position: sticky; /* Fija el footer en la parte inferior */
+}
+
+footer p {
+  padding: 1%;
+  background-color: #b3e6b3; /* Rojo pastel */
+  text-align: center;
+  margin: 0;
+  font-size: 1.2em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px;
+  background-color: #ccffcc; /* Verde pastel */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #b3e6b3;
+}
+
+/*Estilos para MVV*/
+
+/* Estilos para la sección combinada */
+#quienes-somos-mvv {
+  text-align: center; /* Centra el título y el contenido */
+  padding: 20px;
+  margin: 20px;
+  background-color: #cce6ff; /* Azul pastel */
+  border-radius: 10px;
+}
+
+/* Estilos para el contenedor de MVV */
+.mvv-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px; /* Espacio entre las tarjetas */
+}
+
+/* Estilos para las tarjetas de MVV */
+.mvv-card {
+  width: 250px;
+  height: 200px;
+  perspective: 1000px; /* Para el efecto 3D */
+  position: relative;
+}
+
+.mvv-front,
+.mvv-back {
+  width: 250px;
+  height: 200px;
+  position: absolute;
+  backface-visibility: hidden; /* Oculta la parte trasera */
+  display: flex;
+  flex-direction: column; /* Alinea el contenido en columna */
+  align-items: center;
+  justify-content: flex-end; /* Alinea el contenido al final (parte inferior) */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.6s ease;
+}
+
+.mvv-front {
+  background-color: #ffcccc; /* Rojo pastel */
+  transform: rotateY(0deg);
+}
+
+.mvv-front img {
+  max-width: 80%; /* Se adapta al tamaño de la tarjeta */
+  height: auto; /* Mantiene la proporción */
+  object-fit: contain; /* Evita que se recorte */
+  margin-bottom: 15px;
+}
+
+.mvv-back {
+  font-size: 14px;
+  background-color: #ccffcc; /* Verde pastel */
+  transform: rotateY(180deg);
+  padding: 0px; /* Espaciado interno */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centra el texto vertical y horizontalmente */
+}
+
+.mvv-card:hover .mvv-front {
+  transform: rotateY(180deg); /* Gira la tarjeta al hacer hover */
+}
+
+.mvv-card:hover .mvv-back {
+  transform: rotateY(0deg); /* Muestra la parte trasera al hacer hover */
+}
+/* Estilos para el carrusel */
+.carrusel {
+  text-align: center;
+  position: relative;
+  max-width: 600;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carrusel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carrusel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carrusel-item img {
+  width: 100%;
+  display: block;
+}
+
+.carrusel-caption {
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.carrusel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carrusel-control.prev {
+  left: 10px;
+}
+
+.carrusel-control.next {
+  right: 10px;
+}
+/* Estilos para el contenido de cada servicio */
+.servicio-contenido {
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  gap: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.servicio-contenido img {
+  width: 40%; /* Ajusta el tamaño de la imagen */
+  max-width: 300px; /* Limita el tamaño máximo */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.servicio-texto {
+  width: 50%; /* Ajusta el ancho del texto */
+}
+
+/* Ajustes para el carrusel */
+.carrusel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos para la sección de contacto */
+.contacto-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.direccion {
+  width: 40%;
+}
+
+form {
+  width: 55%;
+}

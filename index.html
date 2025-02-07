@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Los Cubitos - Colegio de Kindergarten y Preprimaria</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <img src="Imagenes\Logo.png" alt="Cubitos" class="logo">
+    <p>"Formando a los superhéroes del mañana"</p>
+  </header>
+
+  <section id="quienes-somos-mvv">
+    <h1>Quiénes Somos</h1> <!-- Título centrado -->
+    <div class="mvv-container">
+      <!-- Misión -->
+      <div class="mvv-card">
+        <div class="mvv-front">
+          <img src="Imagenes\mision.png" alt="mision">
+        </div>
+        <div class="mvv-back">
+          <p>Brindar una educación inicial de calidad que fomente el aprendizaje a través del juego, la exploración y la
+            creatividad. Promovemos un desarrollo integral en nuestros estudiantes, fortaleciendo sus habilidades
+            cognitivas, emocionales y sociales en un ambiente seguro, afectivo y estimulante.</p>
+        </div>
+      </div>
+
+      <!-- Visión -->
+      <div class="mvv-card">
+        <div class="mvv-front">
+          <img src="Imagenes\vision.png" alt="mision">
+        </div>
+        <div class="mvv-back">
+          <p>Ser una institución educativa líder en la formación de niños felices, curiosos y seguros de sí mismos, con
+            bases sólidas en valores y conocimientos que les permitan enfrentar con confianza su futuro escolar y
+            personal.</p>
+        </div>
+      </div>
+
+      <!-- Valores -->
+      <div class="mvv-card">
+        <div class="mvv-front">
+          <img src="Imagenes\valores.png" alt="mision">
+        </div>
+        <div class="mvv-back">
+          <p>Respeto, Empatía, Creatividad, Autonomía, Trabajo en equipo, Diversión y Aprendizaje.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios">
+    <h2>
+      <center>Servicios</center>
+    </h2>
+    <div class="carrusel">
+      <div class="carrusel-inner">
+        <!-- Servicio 1 -->
+        <div class="carrusel-item active">
+          <div class="servicio-contenido">
+            <img src="Imagenes\kinder.png" alt="Niñera por las tardes">
+            <div class="servicio-texto">
+              <h3>Niñera por las tardes</h3>
+              <p>Ofrecemos servicios de niñera por las tardes para cuidar a tus hijos mientras trabajas o realizas otras
+                actividades.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Servicio 2 -->
+        <div class="carrusel-item">
+          <div class="servicio-contenido">
+            <img src="Imagenes\computacion.png" alt="Clases de computación">
+            <div class="servicio-texto">
+              <h3>Clases de computación</h3>
+              <p>Nuestras clases de computación están diseñadas para introducir a los niños al mundo de la tecnología de
+                manera divertida y educativa.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Servicio 3 -->
+        <div class="carrusel-item">
+          <div class="servicio-contenido">
+            <img src="Imagenes\bus.png" alt="Servicios de bus">
+            <div class="servicio-texto">
+              <h3>Servicios de bus</h3>
+              <p>Contamos con un servicio de transporte seguro y confiable para llevar y traer a los niños del colegio.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carrusel-control prev">&#10094;</button>
+      <button class="carrusel-control next">&#10095;</button>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <div class="contacto-container">
+      <div class="direccion">
+        <p><strong>Dirección:</strong> Zona 6</p>
+        <p><strong>Teléfonos:</strong>+502 1234-5678</p>
+        <p><strong>Email:</strong>ColegioLosCubitos@gmail.com</p>
+      </div>
+      <form id="contact-form">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="asunto">Asunto:</label>
+        <input type="text" id="asunto" name="asunto" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Los Cubitos. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
