@@ -11,10 +11,149 @@ body {
   min-height: 100vh; /* Asegura que el cuerpo ocupe al menos toda la altura de la ventana */
 }
 
+/*Fondo*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo animado en toda la página */
+body::before {
+  content: "";
+  position: fixed; /* Se mantiene fijo en toda la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(to left, #ffffff, #ffffff);
+}
+
+/* Círculos animados en todo el fondo */
+.circles {
+  position: fixed; /* Se mantiene en todo el fondo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.circles li {
+  position: absolute;
+  list-style: none;
+  display: block;
+  width: 20px;
+  height: 20px;
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+  border-radius: 50%;
+}
+
+/* Aplicar colores diferentes a los círculos */
+.circles li:nth-child(3n) {
+  background: #ffcccc; /* Rojo pastel */
+}
+
+.circles li:nth-child(3n + 1) {
+  background: #b3e6b3; /* Verde pastel */
+}
+
+.circles li:nth-child(3n + 2) {
+  background: hsl(209, 100%, 90%); /* Azul pastel */
+}
+
+/* Diferentes tamaños y posiciones de los círculos */
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+/* Animación de los círculos */
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/*ASD*/
+
 header {
-  background-color: #ffcccc; /* Rojo pastel */
-  padding: 20px;
-  text-align: center;
+  background-color: #b3e6b381; /* Rojo pastel */
+  padding: 5px;
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  gap: 10px; /* Espacio entre la imagen y el texto */
+  font-size: 1.6em;
+  margin-bottom: 30px;
 }
 
 header h1 {
@@ -33,14 +172,6 @@ header p {
   font-size: 1.2em;
 }
 
-nav {
-  background-color: #b3e6b3; /* Rojo pastel */
-  display: flex; /* Alinea el logo y el texto horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  justify-content: center; /* Centra horizontalmente */
-  gap: 10px; /* Espacio entre el logo y el texto */
-}
-
 .logo {
   width: 150px; /* Ajusta el tamaño del logo */
   height: auto; /* Mantiene la proporción */
@@ -49,7 +180,7 @@ nav {
 section {
   padding: 20px;
   margin: 20px;
-  background-color: #cce6ff; /* Azul pastel */
+  background-color: hsla(190, 75%, 83%, 0.47); /* Azul pastel */
   border-radius: 10px;
   flex: 1; /* Hace que las secciones ocupen el espacio restante */
   margin-bottom: 20px; /* Espacio para el footer */
@@ -74,7 +205,7 @@ section h2 {
 
 footer p {
   padding: 1%;
-  background-color: #b3e6b3; /* Rojo pastel */
+  background-color: #b3e6b363; /* Rojo pastel */
   text-align: center;
   margin: 0;
   font-size: 1.2em;
@@ -116,7 +247,7 @@ form button:hover {
   text-align: center; /* Centra el título y el contenido */
   padding: 20px;
   margin: 20px;
-  background-color: #cce6ff; /* Azul pastel */
+  background-color: #ffffff00; /* Azul pastel */
   border-radius: 10px;
 }
 
